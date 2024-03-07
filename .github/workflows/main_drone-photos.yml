@@ -10,9 +10,9 @@ on:
   workflow_dispatch:
     
 env:
-  AZURE_WEBAPP_NAME: drone.photos    # set this to your application's name
+  AZURE_WEBAPP_NAME: drone-photos    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '6.0.x'           # set this to the dot net version to use
+  DOTNET_VERSION: '7.x'           # set this to the dot net version to use
   
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '7.x'
+          dotnet-version: env.DOTNET_VERSION
           include-prerelease: true
 
       - name: Build with dotnet
