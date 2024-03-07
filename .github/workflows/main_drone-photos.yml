@@ -4,7 +4,7 @@ on: [push]
 
 env:
   AZURE_WEBAPP_NAME: drone-photos    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: './'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: './Web/'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '7.x'           # set this to the dot net version to use
   PROJECT_NAME: Web
 
@@ -26,8 +26,8 @@ jobs:
       - name: dotnet build and publish
         run: |
           dotnet restore
-          dotnet build env.PROJECT_NAME --configuration Release
-          run: dotnet publish env.PROJECT_NAME -c Release -o ${{env.DOTNET_ROOT}}/myapp
+          dotnet build Web --configuration Release
+          dotnet publish Web -c Release --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
       
       # Deploy to Azure Web apps
       - name: 'Run Azure webapp deploy action using publish profile credentials'
