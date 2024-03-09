@@ -14,6 +14,7 @@
 - Enable images to be moved
 - Implement Masonry.js (already in solution)
 - Display images
+- Github doesnt seem to like me experimenting with my env variables, maybe I need them in Azure, not sure yet, well down the list to research
 
 ## Completed
 
