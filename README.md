@@ -1,6 +1,7 @@
 # Drone Photos
 
 ## TODO
+- Upgrade to .NET 8
 - Create an admin login with access to image management
   - https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-admin
   - https://stackoverflow.com/questions/75586668/how-do-i-use-the-user-roles-from-the-azure-app-service-authentication-feature-in
@@ -16,10 +17,12 @@
 - Implement Masonry.js (already in solution)
 - Display images
 - Github doesnt seem to like me experimenting with my env variables, maybe I need them in Azure, not sure yet, well down the list to research
+- Put it in Docker 
 
 ## Useful Links
 - JS Component Library
-  - https://ui.shadcn.com/docs/installation/manual
+  - https://ui.shadcn.com/docs/installation/
+  - https://masonry.desandro.com/
 
 ## Completed
 
