@@ -9,6 +9,6 @@ public class PhotoService : IPhotoService
 {
     public string Test()
     {
-        return "TODO: load photos";
+        return "TODO: This service will one day load photos";
     }
 }
