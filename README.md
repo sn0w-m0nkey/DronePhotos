@@ -1,7 +1,6 @@
 # Drone Photos
 
 ## TODO
-- Upgrade to .NET 8
 - Create an admin login with access to image management
   - https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-admin
   - https://stackoverflow.com/questions/75586668/how-do-i-use-the-user-roles-from-the-azure-app-service-authentication-feature-in
@@ -18,6 +17,7 @@
 - Display images
 - Github doesnt seem to like me experimenting with my env variables, maybe I need them in Azure, not sure yet, well down the list to research
 - Put it in Docker 
+- Unit tests (include in workflow)
 
 ## Useful Links
 - JS Component Library
@@ -32,6 +32,7 @@
 - Remove Azure CICD and create it manually
   - https://learn.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel%2Caspnetcore
     - (With some help of copying from Azure created pipelines)
+- Upgrade to .NET 8
 
 ## Markdown Cheatsheets
 https://www.markdownguide.org/basic-syntax/#ordered-lists  
