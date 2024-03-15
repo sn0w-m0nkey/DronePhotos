@@ -1,10 +1,36 @@
 # Drone Photos
 
 ## TODO
+- Create local authentication and authorisation
+  - Using Blazor's built in authentication - (Looks easiest)
+    - https://chrissainty.com/securing-your-blazor-apps-introduction-to-authentication-with-blazor/
+  - Scaffold Identity into a Razor project without existing authorization
+    - https://learn.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-8.0&tabs=visual-studio#scaffold-identity-into-a-blazor-server-project
+  - Auth0 Authentication for Blazor Web Apps (specifically for .NET 8)
+    - https://auth0.com/blog/auth0-authentication-blazor-web-apps/
+    - https://auth0.com/
+
+  - Using user roles
+    - https://www.syncfusion.com/faq/blazor/general/how-do-you-implement-role-based-authorization-in-blazor
+    - https://stackoverflow.com/questions/63444809/blazor-identity-add-roles-on-application-startup
+    - https://auth0.com/blog/role-based-access-control-in-blazor-apps/
+    - https://blazorhelpwebsite.com/ViewBlogPost/21
+    - https://stackoverflow.com/questions/75586668/how-do-i-use-the-user-roles-from-the-azure-app-service-authentication-feature-in#comment133368280_75586668
+
+  - Helpful page styling
+    - https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-8.0
+    - https://learn.microsoft.com/en-us/aspnet/core/blazor/security/server/?view=aspnetcore-8.0&tabs=visual-studio
+
+  - Register an application with the Microsoft identity platform - Can't access MS Entra
+    - https://learn.microsoft.com/en-us/entra/identity-platform/tutorial-blazor-server
+    - https://learn.microsoft.com/en-us/entra/identity-platform/tutorial-web-app-dotnet-register-app
+    - https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant
+    - https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant#--option-1-create-a-new-app-registration-automatically
+
 - Create an admin login with access to image management
   - https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-admin
   - https://stackoverflow.com/questions/75586668/how-do-i-use-the-user-roles-from-the-azure-app-service-authentication-feature-in
-  - https://support.smartbear.com/qacomplete/docs/administrator/config/users-and-groups/single-sign-on/azure/assign.htm
+
 - Create local folder and image management
 - Create a blob container and a blob (page blobs I think)
   - https://learn.microsoft.com/en-us/azure/event-grid/storage-upload-process-images?tabs=azure-cli 
