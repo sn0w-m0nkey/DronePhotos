@@ -4,8 +4,20 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>aspnet-Web-C9F4DF8C-0FB9-4D6E-9ECD-A32B5D92D3A6</UserSecretsId>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Majorsoft.Blazor.Components.Common.JsInterop" Version="1.5.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2"/>
+        <PackageReference Include="Microsoft.JSInterop" Version="8.0.3" />
+        <PackageReference Include="Microsoft.JSInterop.WebAssembly" Version="8.0.3" />
+    </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
@@ -14,9 +26,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\Test\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Pages\Test\Index.cshtml" />
+      <Folder Include="StaticFiles\css\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\MyStaticFiles\css\app.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\JavaScript\bootstrap.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\JavaScript\bootstrap.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\JavaScript\bootstrap.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\JavaScript\bootstrap.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\JavaScript\favicon.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\bootstrap\bootstrap.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\bootstrap\bootstrap.min.css.map" />
     </ItemGroup>
 
 </Project>

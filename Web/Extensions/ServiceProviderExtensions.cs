@@ -1,5 +1,7 @@
 using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
 using Web.Configuration;
+using Web.Data;
 using Web.Services;
 
 namespace Web.Extensions;
@@ -17,7 +19,10 @@ public static class ServiceProviderExtensions
 
     public static IServiceCollection RegisterDataComponents(this IServiceCollection services, IConfiguration configuration)
     {
-        //services.AddDbContext<MyContext>(options => options.UseSqlServer(configuration.GetConnectionString("MyContext")));
+        // TODO: Update connection string
+        services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+            
         return services;
     }
 
@@ -38,5 +43,6 @@ public static class ServiceProviderExtensions
     private static void RegisterServices(IServiceCollection services)
     {
         services.AddScoped<IPhotoService, PhotoService>();
+        services.AddSingleton<WeatherForecastService>();
     }
 }
