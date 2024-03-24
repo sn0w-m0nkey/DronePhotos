@@ -27,6 +27,10 @@
 
     <ItemGroup>
       <Folder Include="StaticFiles\css\" />
+      <Folder Include="StaticFiles\images\" />
+      <Folder Include="StaticFiles\js\" />
+      <Folder Include="wwwroot\css\" />
+      <Folder Include="wwwroot\js\" />
     </ItemGroup>
 
     <ItemGroup>

@@ -59,12 +59,15 @@ else
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(builder.Environment.ContentRootPath, "StaticFiles")),
-    RequestPath = "/StaticFiles"
-});
+app.UseStaticFiles();
+
+// TODO: Fix this
+// app.UseStaticFiles(new StaticFileOptions
+// {
+//     FileProvider = new PhysicalFileProvider(
+//         Path.Combine(builder.Environment.ContentRootPath, "StaticFiles")),
+//     RequestPath = "/StaticFiles"
+// });
 
 app.UseAntiforgery();
 

@@ -21,7 +21,7 @@ public static class ServiceProviderExtensions
     {
         // TODO: Update connection string
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             
         return services;
     }
