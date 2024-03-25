@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Web.Components;
@@ -16,6 +17,15 @@ builder.Services.AddRazorComponents()
 builder.Services
     .RegisterWebComponents(builder.Configuration)
     .RegisterDataComponents(builder.Configuration);
+
+builder.Services.AddRazorPages()
+    .AddRazorPagesOptions(options =>
+    {
+        options.Conventions
+            .ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
+    });
+
+
 
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
@@ -45,6 +55,16 @@ builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSe
 
 var app = builder.Build();
 
+
+app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+
+// app.UseEndpoints(endpoints =>
+// {
+//     endpoints.MapControllers();
+//     endpoints.MapBlazorHub();
+//     endpoints.MapFallbackToPage("/_Host");
+// });
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -63,7 +83,7 @@ app.UseStaticFiles();
 
 // TODO: Fix this
 // app.UseStaticFiles(new StaticFileOptions
-// {
+// { 
 //     FileProvider = new PhysicalFileProvider(
 //         Path.Combine(builder.Environment.ContentRootPath, "StaticFiles")),
 //     RequestPath = "/StaticFiles"

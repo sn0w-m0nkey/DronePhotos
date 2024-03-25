@@ -1,0 +1,33 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Image Uploads</title>
+</head>
+<body>
+<div>
+    <h1>Image Uploads</h1>
+    
+    <form enctype="multipart/form-data" method="post" asp-controller="ImageUploader" asp-action="UploadImages" asp-antiforgery="false">
+        <dl>
+            <dt>
+                <label asp-for="FileUpload.FormFile"></label>
+            </dt>
+            <dd>
+                <input asp-for="FileUpload.FormFile" type="file">
+                <span asp-validation-for="FileUpload.FormFile"></span>
+            </dd>
+        </dl>
+        <input asp-page-handler="Upload" class="btn" type="submit" value="Upload" />
+        @Html.AntiForgeryToken()
+    </form>
+
+</div>
+</body>
+</html>

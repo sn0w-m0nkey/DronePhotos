@@ -19,7 +19,6 @@ public static class ServiceProviderExtensions
 
     public static IServiceCollection RegisterDataComponents(this IServiceCollection services, IConfiguration configuration)
     {
-        // TODO: Update connection string
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             
@@ -43,6 +42,7 @@ public static class ServiceProviderExtensions
     private static void RegisterServices(IServiceCollection services)
     {
         services.AddScoped<IPhotoService, PhotoService>();
+        services.AddScoped<IImageUploader, ImageUploader>();
         services.AddSingleton<WeatherForecastService>();
     }
 }
