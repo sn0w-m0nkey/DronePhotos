@@ -10,6 +10,7 @@
   - https://dev.to/rasheedmozaffar/intro-to-js-interop-in-blazor-46mo
   - https://blazor-university.com/javascript-interop/
 
+ - Add user roles
     - https://www.syncfusion.com/faq/blazor/general/how-do-you-implement-role-based-authorization-in-blazor
     - https://stackoverflow.com/questions/63444809/blazor-identity-add-roles-on-application-startup
     - https://auth0.com/blog/role-based-access-control-in-blazor-apps/

@@ -2,7 +2,7 @@
 
 namespace Web.Controllers;
 
-[Route("/ImageUploadController")]
+[Route("/ImageUploader")]
 public class ImageUploadController : Controller
 {
     [HttpGet("UploadImages")]
