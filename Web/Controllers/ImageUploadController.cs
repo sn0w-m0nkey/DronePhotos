@@ -11,10 +11,10 @@ public class ImageUploadController : Controller
         return View();
     }
     
-    // [HttpPost]
-    // [ValidateAntiForgeryToken]
-    // public IActionResult UploadImages()
-    // {
-    //     return View();
-    // }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult UploadImages(string fileTest)
+    {
+        return View();
+    }
 }

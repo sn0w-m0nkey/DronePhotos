@@ -1,7 +1,7 @@
 ﻿@model dynamic
 
 @{
-    Layout = null;
+    Layout = "";
 }
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 <div>
     <h1>Image Uploads</h1>
     
-    <form enctype="multipart/form-data" method="post" asp-controller="ImageUploader" asp-action="UploadImages" asp-antiforgery="false">
+    <form enctype="multipart/form-data" method="post" asp-controller="ImageUploader" asp-action="UploadImages">
         <dl>
             <dt>
                 <label asp-for="FileUpload.FormFile"></label>

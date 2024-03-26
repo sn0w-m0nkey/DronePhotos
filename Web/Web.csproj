@@ -41,6 +41,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="JsTesting\" />
       <Folder Include="Pages\" />
       <Folder Include="StaticFiles\css\" />
       <Folder Include="StaticFiles\images\" />
