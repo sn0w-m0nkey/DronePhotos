@@ -1,23 +1,7 @@
+@page "/JsTesting"
+
 @inject IJSRuntime JS
 
 <script src="{PATH}/JsCollocation1.razor.js"></script>
 
-<button @onclick="ShowPrompt">Call showPrompt1</button>
-
-@if (!string.IsNullOrEmpty(result))
-{
-    <p>
-        Hello @result!
-    </p>
-}
-
-@code {
-    private string? result;
-
-    public async void ShowPrompt()
-    {
-        result = await JS.InvokeAsync<string>(
-            "showPrompt1", "What's your name?");
-        StateHasChanged();
-    }
-}
+<h1>JS Testing</h1>

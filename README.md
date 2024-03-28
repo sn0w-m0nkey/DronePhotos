@@ -1,6 +1,11 @@
 # Drone Photos
 
 ## TODO
+- Combine razor & csthml
+- Handle Razor posts
+  - https://stackify.com/asp-net-razor-pages-vs-mvc/
+- Combine razor views with cshtml
+  - https://mikaelkoskinen.net/post/combining-razor-blazor-pages-single-asp-net-core-3-application
 - Add email to registration
   - https://learn.microsoft.com/en-us/aspnet/core/security/authentication/social/google-logins?view=aspnetcore-8.0
   - https://www.c-sharpcorner.com/article/implement-gmail-and-facebook-based-authentication-in-asp-net-core-2-2/
@@ -9,7 +14,6 @@
   - https://github.com/google/j2cl/blob/master/docs/jsinterop-by-example.md
   - https://dev.to/rasheedmozaffar/intro-to-js-interop-in-blazor-46mo
   - https://blazor-university.com/javascript-interop/
-
  - Add user roles
     - https://www.syncfusion.com/faq/blazor/general/how-do-you-implement-role-based-authorization-in-blazor
     - https://stackoverflow.com/questions/63444809/blazor-identity-add-roles-on-application-startup
